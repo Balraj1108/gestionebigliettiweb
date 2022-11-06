@@ -22,7 +22,7 @@
             <ul class="dropdown-menu" aria-labelledby="dropdown07">
               <li><a class="dropdown-item" href="ListBigliettiServlet">Lista Elementi</a></li>
               <li><a class="dropdown-item" href="PrepareInsertArticoloServlet">Inserisci Nuovo</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="PrepareSearchBigliettoServlet">Ricerca Biglietto</a></li>
             </ul>
           </li>
         </ul>
