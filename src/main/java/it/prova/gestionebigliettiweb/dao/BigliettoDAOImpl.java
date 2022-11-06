@@ -57,7 +57,7 @@ public class BigliettoDAOImpl implements BigliettoDAO {
 		String query = "from Biglietto where 1=1";
 		
 		if (!(input.getProvenienza().isEmpty())) {
-			query += "and provenienza like '%" + input.getDestinazione() + "%'";
+			query += "and provenienza like '%" + input.getProvenienza() + "%'";
 		}
 		if (!(input.getDestinazione().isEmpty())) {
 			query += "and destinazione like '%" + input.getDestinazione() + "%'";
