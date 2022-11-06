@@ -52,7 +52,7 @@
 					    <div class='card-footer'>
 					    <form action="ExecuteDeleteBigliettoServlet" method="post">
 					      <!--  <a class='btn btn-outline-primary' style='width:100px'>-->
-					        <button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary">Conferma</button>
+					        <button type="submit" name="submit" value="submit" id="submit" class="btn btn-danger">Conferma</button>
 					           <!-- <i class='fa fa-chevron-right'>Conferma</i> -->
 								<input type="hidden" name="idBigliettoDaEliminare" value="<%=bigliettoInPagina.getId() %>">
 					       <!-- </a>-->

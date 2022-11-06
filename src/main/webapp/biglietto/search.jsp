@@ -62,7 +62,10 @@
 								</div>
 									
 							<div class="col-12">
-								<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary">Conferma Ricerca</button>
+								<button type="submit" name="submit" value="submit" id="submit" class="btn btn-info">Conferma Ricerca</button>
+								<a href="index.jsp" class='btn btn-outline-secondary' style='width:80px'>
+					            	<i class='fa fa-chevron-left'></i> Back
+					        	</a>
 							</div>
 		
 						</form>

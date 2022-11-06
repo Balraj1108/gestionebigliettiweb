@@ -71,7 +71,7 @@
 								<input type="hidden" name="idBiglietto" id="idBiglietto" value="<%=bigliettoInPagina.getId() %>">
 								
 							<div class="col-12">
-								<button type="submit" name="submit" value="submit" id="submit" class="btn btn-primary">Conferma Modifica</button>
+								<button type="submit" name="submit" value="submit" id="submit" class="btn btn-info">Conferma Modifica</button>
 								<a href="ListBigliettiServlet" class='btn btn-outline-secondary' style='width:80px'>
 					            	<i class='fa fa-chevron-left'></i> Back
 					        	</a>
