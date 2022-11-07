@@ -1,6 +1,4 @@
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="it.prova.gestionebigliettiweb.model.Biglietto"%>
-<%@page import="java.util.List"%>
+
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <!doctype html>
 <html lang="it" class="h-100" >
@@ -8,6 +6,9 @@
 	 
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="../header.jsp" />
+	 	<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+	 	<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+	 	<link href="./assets/css/customstyle.css" rel="stylesheet">
 	   
 	   <title>Lista Biglietti</title>
 	 </head>
@@ -57,22 +58,28 @@
 				                    </tr>
 				                </thead>
 				                <tbody>
-				                	<% List<Biglietto> listaBiglietti = (List<Biglietto>)request.getAttribute("listaBigliettiAttr");
-				                		for(Biglietto item:listaBiglietti){ %>
-				                    <tr >
-				                        <td><%=item.getId() %></td>
-				                        <td><%=item.getProvenienza() %></td>
-				                        <td><%=item.getDestinazione() %></td>
-				                        <td><%=item.getPrezzo() %></td>
-				                        <td><%=item.getData()!=null? new SimpleDateFormat("dd/MM/yyyy").format(item.getData()):"N.D."%></td>
-				                        <td>
-											<a class="btn  btn-sm btn-outline-secondary" href="ExecuteShowBigliettoServlet?idBiglietto=<%=item.getId() %>">Visualizza</a>
-											<a class="btn  btn-sm btn-outline-primary ml-2 mr-2" href="PrepareUpdateBigliettoServlet?idBigliettoUpdate=<%=item.getId() %>">Edit</a>
-											<a class="btn btn-outline-danger btn-sm" href="PrepareDeleteBigliettoServlet?idBigliettoDaEliminare=<%=item.getId() %>">Delete</a>
-										</td>
-				                    </tr>
-				                    <% } %>
-				                    
+				                <c:forEach items = "${listaBigliettiAttr}" var = "item">
+				                <tr >
+				                	<td>
+				                		${item.id}
+				                	</td><td>
+				                		${item.provenienza}
+				                	</td><td>
+				                		${item.destinazione}
+				                	</td><td>
+				                		${item.prezzo}
+				                	</td><td>
+				                		<fmt:formatDate value="${item.data}"/>
+	
+				                	<td>
+											<a class="btn  btn-sm btn-outline-secondary" href="ExecuteShowBigliettoServlet?idBiglietto=${item.id}">Visualizza</a>
+											<a class="btn  btn-sm btn-outline-primary ml-2 mr-2" href="PrepareUpdateBigliettoServlet?idBigliettoUpdate=${item.id}">Edit</a>
+											<a class="btn btn-outline-danger btn-sm" href="PrepareDeleteBigliettoServlet?idBigliettoDaEliminare=${item.id}">Delete</a>
+									</td>
+				                </tr>
+				                </c:forEach>
+				                
+				                   
 				                </tbody>
 				            </table>
 				        </div>

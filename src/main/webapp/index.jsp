@@ -1,11 +1,15 @@
 <!doctype html>
+
 <html lang="it" class="h-100" >
+
 	 <head>
 	 
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="./header.jsp" />
 		<!-- Custom styles per le features di bootstrap 'Columns with icons' -->
 	   <link href="./assets/css/features.css" rel="stylesheet">
+	   <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+	   <link href="./assets/css/customstyle.css" rel="stylesheet">
 	   
 	   <title>Gestione Biglietti</title>
 	 </head>
@@ -52,7 +56,7 @@
 				  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
 				</div>
 			    
-			     <div class="p-5 mb-4 bg-light rounded-3">
+			     <div class="p-5 mb-4 bg-secondary rounded-3">
 				      <div class="container-fluid py-5">
 				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione Biglietti</h1>
 				        <p class="col-md-8 fs-4">Tramite questo sito puoi creare/modificare o eliminare i tuoi biglietti</p>

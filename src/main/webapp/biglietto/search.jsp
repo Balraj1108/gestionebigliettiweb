@@ -1,11 +1,12 @@
 <!doctype html>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="it.prova.gestionebigliettiweb.model.Biglietto"%>
 <html lang="it" class="h-100" >
 	 <head>
 	 
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="../header.jsp" />
+	 	<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+	 	<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
+	 	<link href="./assets/css/customstyle.css" rel="stylesheet">
 	   
 	   <title>Ricerca Biglietto</title>
 	 </head>

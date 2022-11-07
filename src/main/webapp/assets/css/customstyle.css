@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+
+
+.bg-info{
+	background-color: #008cff !important;
+}
+
+.bg-secondary{
+	background-color: #c0c0c0!important;
+}
+
+.navbar{
+	background-color: #0B5345;
+}
+
+.footer{
+	background-color: #0B5345;
+}
+
+.nav-link{
+	color: #ffffff !important;
+}
+

@@ -34,7 +34,7 @@ public class ExecuteUpdateBigliettoServlet extends HttpServlet {
 		
 		// se la validazione non risulta ok
 		if (!UtilityBigliettoForm.validateBigliettoBean(bigliettoInstance)) {
-			try {
+			/*try {
 				request.setAttribute("bigliettoDaInviareAdUpdate", MyServiceFactory.getBigliettoServiceInstance()
 						.caricaSingoloElemento(Long.parseLong(idBigliettoParam)));
 			} catch (Exception e) {
@@ -42,7 +42,8 @@ public class ExecuteUpdateBigliettoServlet extends HttpServlet {
 				request.setAttribute("errorMessage", "Attenzione si è verificato un errore.");
 				request.getRequestDispatcher("/index.jsp").forward(request, response);
 				return;
-			}
+			}*/
+			request.setAttribute("bigliettoDaInviareAdUpdate", bigliettoInstance);
 			request.setAttribute("errorMessage", "Attenzione sono presenti errori di validazione");
 			request.getRequestDispatcher("/biglietto/update.jsp").forward(request, response);
 			return;
