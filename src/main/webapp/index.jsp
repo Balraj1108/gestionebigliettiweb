@@ -60,8 +60,8 @@
 				      <div class="container-fluid py-5">
 				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione Biglietti</h1>
 				        <p class="col-md-8 fs-4">Tramite questo sito puoi creare/modificare o eliminare i tuoi biglietti</p>
-				        <a class="btn btn-info btn-lg" href="ListBigliettiServlet">Elenca Biglietti</a>
-				        <a class="btn btn-info btn-lg" href="PrepareSearchBigliettoServlet">Ricerca Biglietto</a>
+				        <a class="btn btn-info btn-lg" href="${pageContext.request.contextPath}/ListBigliettiServlet">Elenca Biglietti</a>
+				        <a class="btn btn-info btn-lg" href="${pageContext.request.contextPath}/admin/PrepareSearchBigliettoServlet">Ricerca Biglietto</a>
 				      </div>
 			    </div>
 			    
@@ -76,7 +76,7 @@
 			        </div>
 			        <h2>Elenca Biglietti</h2>
 			        <p>Tramite questa funzionalità puoi avere una lista di tutti i biglietti presenti nel database ed accedere ad ogni singolo biglietto per poi poterlo modificare o eliminare </p>
-			        <a href="ListBigliettiServlet" class="icon-link">
+			        <a href="${pageContext.request.contextPath}/ListBigliettiServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>
@@ -87,7 +87,8 @@
 			        </div>
 			        <h2>Inserisci Biglietto</h2>
 			        <p>Tramite questa funzionalità puoi creare un nuovo biglietto, assegnandogli i seguenti campi: provenienza, destinazione, prezzo e data</p>
-			        <a href="PrepareInsertBigliettoServlet" class="icon-link">
+			        
+			        <a href="${pageContext.request.contextPath}/admin/PrepareInsertBigliettoServlet" class="icon-link">
 			          Vai alla funzionalità
 			          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
 			        </a>

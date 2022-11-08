@@ -3,17 +3,16 @@
 	 <head>
 	 
 	 	<!-- Common imports in pages -->
-	 	<jsp:include page="../header.jsp" />
+	 	<jsp:include page="./header.jsp" />
 	 	<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 	 	<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt" %>
 	 	<link href="./assets/css/customstyle.css" rel="stylesheet">
 	   
-	   <title>Ricerca Biglietto</title>
+	   <title>Login</title>
 	 </head>
 	   <body class="d-flex flex-column h-100">
 	   
 	   		<!-- Fixed navbar -->
-	   		<jsp:include page="../navbar.jsp"></jsp:include>
 	    
 			
 			<!-- Begin page content -->
@@ -34,39 +33,26 @@
 					</div>
 			  
 			  <div class='card'>
-				    <div class='card-header'>
-				        <h5>Ricerca Biglietto</h5> 
+				    <div class='card-header text-center'>
+				        <h5>Accedi al Sistema</h5> 
 				    </div>
 				    <div class='card-body'>
 		
 		
-							<form method="post" action="${pageContext.request.contextPath}/admin/ExecuteSearchBigliettoServlet" class="row g-3" novalidate="novalidate">
+							<form method="post" action="LoginServlet" class="row g-3" novalidate="novalidate">
 							
 								<div class="col-md-6">
-									<label for="provenienza" class="form-label">Provenienza</label>
-									<input type="text" name="provenienza" id="provenienza" class="form-control" placeholder="Inserire la provenienza"  >
+									<label for="inputUsername" class="form-label">Username</label>
+									<input type="text" name="inputUsername" id="inputUsername" class="form-control" placeholder="Inserire Username"  >
 								</div>
 								
 								<div class="col-md-6">
-									<label for="destinazione" class="form-label">Destinazione</label>
-									<input type="text" name="destinazione" id="destinazione" class="form-control" placeholder="Inserire la destinazione"  >
-								</div>
-							
-								<div class="col-md-6">
-									<label for="prezzo" class="form-label">Prezzo</label>
-									<input type="number" class="form-control" name="prezzo" id="prezzo" placeholder="Inserire prezzo">
-								</div>
-								
-								<div class="col-md-3">
-									<label for="data" class="form-label">Data</label>
-									<input class="form-control"  name="data" id="data" type="date" placeholder="dd/MM/yy" title="formato : gg/mm/aaaa">
+									<label for="inputPassword" class="form-label">Password</label>
+									<input type="text" name="inputPassword" id="inputPassword" class="form-control" placeholder="Inserire la Password"  >
 								</div>
 									
 							<div class="col-12">
-								<button type="submit" name="submit" value="submit" id="submit" class="btn btn-info">Conferma Ricerca</button>
-								<a href="${pageContext.request.contextPath}/index.jsp" class='btn btn-outline-secondary' style='width:80px'>
-					            	<i class='fa fa-chevron-left'></i> Back
-					        	</a>
+								<button type="submit" name="submit" value="submit" id="submit" class="btn btn-info">Sign In</button>
 							</div>
 		
 						</form>
@@ -82,6 +68,6 @@
 			</main>
 			
 			<!-- Footer -->
-			<jsp:include page="../footer.jsp" />
+			<jsp:include page="./footer.jsp" />
 	  </body>
 </html>

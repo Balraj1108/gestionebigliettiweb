@@ -50,13 +50,13 @@
 					    
 					    
 					    <div class='card-footer'>
-					    <form action="ExecuteDeleteBigliettoServlet" method="post">
+					    <form action="${pageContext.request.contextPath}/admin/ExecuteDeleteBigliettoServlet" method="post">
 					      <!--  <a class='btn btn-outline-primary' style='width:100px'>-->
 					        <button type="submit" name="submit" value="submit" id="submit" class="btn btn-danger">Conferma</button>
 					           <!-- <i class='fa fa-chevron-right'>Conferma</i> -->
 								<input type="hidden" name="idBigliettoDaEliminare" value="${visualizzaBigliettoEliminareAttr.id}">
 					       <!-- </a>-->
-					        <a href="ListBigliettiServlet" class='btn btn-outline-secondary' style='width:80px'>
+					        <a href="${pageContext.request.contextPath}/ListBigliettiServlet" class='btn btn-outline-secondary' style='width:80px'>
 					            <i class='fa fa-chevron-left'></i> Back
 					        </a>
 					    </form>

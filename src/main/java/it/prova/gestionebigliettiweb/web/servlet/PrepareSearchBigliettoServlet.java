@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/PrepareSearchBigliettoServlet")
+@WebServlet("/admin/PrepareSearchBigliettoServlet")
 public class PrepareSearchBigliettoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

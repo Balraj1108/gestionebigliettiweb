@@ -43,7 +43,7 @@
 				        <h5>Lista dei risultati</h5> 
 				    </div>
 				    <div class='card-body'>
-				    	<a class="btn btn-info " href="PrepareInsertBigliettoServlet">Add New</a>
+				    	<a class="btn btn-info " href="${pageContext.request.contextPath}/admin/PrepareInsertBigliettoServlet">Add New</a>
 				    
 				        <div class='table-responsive'>
 				            <table class='table table-striped ' >
@@ -72,9 +72,9 @@
 				                		<fmt:formatDate value="${item.data}"/>
 	
 				                	<td>
-											<a class="btn  btn-sm btn-outline-secondary" href="ExecuteShowBigliettoServlet?idBiglietto=${item.id}">Visualizza</a>
-											<a class="btn  btn-sm btn-outline-primary ml-2 mr-2" href="PrepareUpdateBigliettoServlet?idBigliettoUpdate=${item.id}">Edit</a>
-											<a class="btn btn-outline-danger btn-sm" href="PrepareDeleteBigliettoServlet?idBigliettoDaEliminare=${item.id}">Delete</a>
+											<a class="btn  btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/ExecuteShowBigliettoServlet?idBiglietto=${item.id}">Visualizza</a>
+											<a class="btn  btn-sm btn-outline-primary ml-2 mr-2" href="${pageContext.request.contextPath}/admin/PrepareUpdateBigliettoServlet?idBigliettoUpdate=${item.id}">Edit</a>
+											<a class="btn btn-outline-danger btn-sm" href="${pageContext.request.contextPath}/admin/PrepareDeleteBigliettoServlet?idBigliettoDaEliminare=${item.id}">Delete</a>
 									</td>
 				                </tr>
 				                </c:forEach>
